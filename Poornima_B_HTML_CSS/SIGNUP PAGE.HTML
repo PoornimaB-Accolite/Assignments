@@ -1,0 +1,96 @@
+<html>
+<head>
+<head>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles/SIGNUP%20PAGE.CSS">
+    <script>
+		function myFunction()
+		{	var pwd = document.getElementById("ex").value;
+			var cpwd = document.getElementById("xe").value;
+			if(pwd != cpwd)
+			{
+				alert("PASSWORD Mismatching");
+			}
+			else if(pwd == cpwd)
+			{
+			
+			
+				if (typeof(Storage) !== "undefined") 
+				{
+						// Code for localStorage/sessionStorage.
+						
+						var mail = document.getElementById("email").value;
+						var passrd = document.getElementById("ex").value;
+						localStorage.setItem("mail","passrd");
+						alert("Your Details is Successfully stored");
+				} 
+				else
+				{
+				document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+				}
+			}
+			
+
+		}
+        
+        
+    
+    </script>
+    
+</head>
+   
+   
+<body> 
+ <div class="cent" style= "width:800px; margin:1 auto;">
+    <ul>
+    
+    <li><a href="#" id="c">&nbsp;<i class="fa fa-user"></i>&nbsp;&nbsp;REGISTER</a></li>
+        <li><a href="#" id="d"></a></li>
+        <li><a href="#" id="d"></a></li>
+        <li><a href="#" id="d"></a></li>
+        
+        <li><a href="Loginpage.html" id="c">LOGIN</a></li>
+        
+        
+    </ul>
+ </div>
+<div id="main" style="width:678px; margin:0 auto;">
+   
+  <div id="simple_form">
+      <span style="color:#aaa"><font size=+2>REGISTER YOUR DETAILS</font></span><br>
+    <form id="registration" onsubmit="myFunction()" action="vedioPortal.html">
+        <div class="InputIcon">
+                <input type="text" name="flname" class="button" placeholder="YOUR USERNAME" id="nam" required><br>
+                <i class="fa fa-user fa-lg fa-fw" aria-hidden="True"></i>
+
+        </div><br>
+        
+        <div class="InputIcon">
+
+                    <input type="text" name="bday" class="button" id="z" placeholder="YOUR BIRTHDAY(YEAR-MONTH-DAY)" required><br>
+                     <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="True"></i>
+        </div><br>
+        <div class="InputIcon">
+
+                <input type="email" name="mail" class="button" placeholder="YOUR EMAIL_ID" id="email" required><br>
+                <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="True"></i>
+        </div><br>
+        <div class="InputIcon">
+
+                <input type="password" name="text1" class="button" id="xe" placeholder="SET YOUR PASSWORD" required><br>
+                <i class="fa fa-lock fa-lg fa-fw" aria-hidden="True"></i>
+        </div><br>
+        <div class="InputIcon">
+
+                <input type="password" name="text2" class="button" id="ex" placeholder="CONFIRM YOUR PASSWORD" required><br>
+                <i class="fa fa-lock fa-lg fa-fw" aria-hidden="True"></i>
+        </div><br><br>
+    <input type="submit" name="submit" id="but1" value="SUBMIT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="reset" name="reset" id="but2" value="RESET">
+    </form>
+  </div> 
+</div>
+ 
+    </body>
+    </head>
+</html>
