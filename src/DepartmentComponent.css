@@ -1,0 +1,8 @@
+select{
+    width: 15%;
+    height: 40px;
+    margin: 10px;
+}
+table{
+    border: 1px solid black;
+}
