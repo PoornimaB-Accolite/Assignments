@@ -1,0 +1,46 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PersonImplementationService WSDL service -->
+
+  <service name="PersonImplementation" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://pack"/>
+      <parameter name="wsdlServiceElement" value="PersonImplementationService"/>
+      <parameter name="schemaQualified" value="http://pack"/>
+      <parameter name="wsdlServicePort" value="PersonImplementation"/>
+      <parameter name="className" value="pack.PersonImplementationSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="PersonImplementation"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="delete" qname="operNS:delete" xmlns:operNS="http://pack" returnQName="retNS:deleteReturn" xmlns:retNS="http://pack" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://pack" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="createPerson" qname="operNS:createPerson" xmlns:operNS="http://pack" returnQName="retNS:createPersonReturn" xmlns:retNS="http://pack" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:name" xmlns:pns="http://pack" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:id" xmlns:pns="http://pack" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:age" xmlns:pns="http://pack" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="updatePerson" qname="operNS:updatePerson" xmlns:operNS="http://pack" returnQName="retNS:updatePersonReturn" xmlns:retNS="http://pack" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:name" xmlns:pns="http://pack" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:id" xmlns:pns="http://pack" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:age" xmlns:pns="http://pack" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="addPersons" qname="operNS:addPersons" xmlns:operNS="http://pack" returnQName="retNS:addPersonsReturn" xmlns:retNS="http://pack" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="getPersonDetails" qname="operNS:getPersonDetails" xmlns:operNS="http://pack" returnQName="retNS:getPersonDetailsReturn" xmlns:retNS="http://pack" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://pack" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAllPersons" qname="operNS:getAllPersons" xmlns:operNS="http://pack" returnQName="retNS:getAllPersonsReturn" xmlns:retNS="http://pack" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="addPersons createPerson getAllPersons getPersonDetails delete updatePerson"/>
+
+  </service>
+</deployment>
