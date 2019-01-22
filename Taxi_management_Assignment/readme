@@ -1,0 +1,6 @@
+In this Taxi-managemnet system we have Passenger class which contains destination getter and setter.
+TaxiStand is the main class it contains functions like add_tai , isfull, isEmpty ,in allocatepassanger() taxi object is created and destination is checked 
+if the destion is null then destination is set and passanger is added and status variable is updated outherwise is destination is matched the person is assigned
+to taxi and status is updated.
+synchronized keyword is used in processqueue so that overwritting does not occur
+Two threads are created 
