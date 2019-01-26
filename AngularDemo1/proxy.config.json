@@ -1,0 +1,6 @@
+ {
+    "/JustBooks/*": {
+      "target": "http://localhost:8111",
+      "secure": false
+    }
+  }

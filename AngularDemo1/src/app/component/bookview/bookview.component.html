@@ -1,0 +1,30 @@
+<p>
+  Book details 
+  <span *ngIf="book && book.name">
+    <table class="t" border="1" style="width: 747px;padding: 200px;">
+      <tr style="height:50px;">
+        <td>Book Name :</td>
+        <td>{{book.name}}</td>
+      </tr>
+      <tr>
+          <td>Book Id :</td>
+          <td>{{book.id}}</td>
+        </tr>
+        <tr>
+            <td>Book Author :</td>
+            <td>{{book.name}}</td>
+          </tr>
+          <tr>
+              <td>Description :</td>
+              <td>{{book.description}}</td>
+            </tr>
+            <tr>
+                <td>Price :</td>
+                <td>{{book.price}}</td>
+              </tr>
+
+  </table>
+    </span>
+  
+  
+</p>

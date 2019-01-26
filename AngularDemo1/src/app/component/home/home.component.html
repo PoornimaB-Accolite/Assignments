@@ -1,0 +1,31 @@
+<p class="section">
+  <!--<app-nav-bar></app-nav-bar>-->
+
+  Welcome to Library
+  </p>
+  <div class="jumbotron">
+      <h3>Add a Book:</h3>
+      <div>
+          <label for="title">Name:</label>
+          <input type="text" id="title" [(ngModel)]="name">
+      </div>
+      <div>
+          <label for="bookId">ID: &nbsp;</label>
+          <input type="text" id="bookId" [(ngModel)]="id">
+      </div>
+      <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author" [(ngModel)]="author">
+      </div>
+      <div>
+          <label for="price">Price:</label>
+          <input type="text" id="price" [(ngModel)]="price">
+      </div>
+      <div>
+          <label for="desc">Description:</label>
+          <input type="text" id="desc" [(ngModel)]="description">
+      </div>
+     
+     
+      <button type="button"(click)="postData()">Add Book</button>
+  </div>

@@ -1,0 +1,23 @@
+<p class="jumbotron">
+Add Your favourite Book To Cart
+<br><br>
+<span>
+    
+        <label for="bookId"> Book ID: &nbsp;</label>
+        <input type="text" id="bookId" [(ngModel)]="id" style="width:100px;height:40px;">&nbsp;
+        &nbsp;&nbsp;
+    <button type="button" (click)="PostDataCart()" class=" btn btn-primary">Add Book To Cart</button>
+    <br><br>
+
+</span>
+
+  <span *ngFor=" let booko of book ">
+      
+     <input type="text"  name="name" value="{{ booko.name}}" disabled class="d"/>
+     <a [routerLink]="['/bookview',booko.id]" routerLinkActive="active" class="d"> Click to View </a>
+      &nbsp;&nbsp;&nbsp;
+      
+      <br><br>
+  </span>
+   
+</p>

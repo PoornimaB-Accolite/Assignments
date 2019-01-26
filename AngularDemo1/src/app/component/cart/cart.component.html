@@ -1,0 +1,11 @@
+<p>
+  Cart Items.<br><br>
+  <span *ngFor=" let booko of list ">
+      <input type="text"  name="name" value="{{ booko.id }}" disabled class="d"/>
+      &nbsp;&nbsp;&nbsp;
+      
+      <a [routerLink]="['/bookview',booko.id]" routerLinkActive="active" class="d"> Click to View </a>
+       &nbsp;&nbsp;&nbsp;
+       <br><br>
+     </span>
+</p>

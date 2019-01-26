@@ -1,0 +1,19 @@
+<p class="section jumbotron" >
+  Search for The Book By Its Id
+</p>
+
+<p>
+    <input type="text" name="bookid" [(ngModel)]="id" placeholder="Mention book id to search" class="d">
+   &nbsp;&nbsp;
+    <span *ngIf="book">
+        <input type="text" value="{{ book.name }}" disabled class="book" />
+      </span>
+    <br> <br>  
+    <button (click)="searchBookById()" class="btn btn-success">Search book</button>
+    </p>
+    <br><br><br>  
+    
+  
+ 
+
+
